@@ -18,8 +18,7 @@ export async function Clawback() {
   // Clawback 트랜잭션: 발행자가 특정 보유자의 IOU를 강제 회수(감액)
   // 전제: 발행자 계정은 asfClawback(16) 플래그가 설정되어 있어야 함.
   // - Account: 발행자 주소
-  // - Destination: 회수 대상 계정(토큰을 보유하고 있는 계정)
-  // - Amount: 회수할 IOU {currency, issuer(발행자), value}
+  // - Amount: 회수할 IOU {currency, issuer(회수 대상 계정 = user), value}
   const tx = {
     TransactionType: "Clawback",
     Account: admin.address,
