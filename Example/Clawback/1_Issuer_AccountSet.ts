@@ -15,7 +15,7 @@ export async function Issuer_AccountSet() {
 
   // AccountSet으로 발행자 계정에 Clawback 플래그 설정
   // - Account: 발행자 주소
-  // - SetFlag: 16 (asfClawback) → 발행자가 이후 Clawback 트랜잭션을 사용할 수 있게 함
+  // - SetFlag: 16 (asfAllowTrustlineClawback) → 발행자가 이후 Clawback 트랜잭션을 사용할 수 있게 함
   const tx: Transaction = {
     TransactionType: "AccountSet",
     Account: admin.address,
